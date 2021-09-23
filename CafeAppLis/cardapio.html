@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cardápio</title>
+
+  <!-- Bootstrap - CSS -->
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <!-- Toolbar Todo o conteudo que aparece na barra de ferramentas -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <!-- cria o titulo presente no canto superior esquerdo da pg -->
+          Coffee
+          <small>Arábica</small>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav"> <!--cria uma lista na navbar  -->
+            <li class="nav-item">  <!--adiciona um item a lista   -->
+              <a class="nav-link" href="./index.html">Home</a> <!--endereço para ir a pg principal  -->
+            </li>
+            <li class="nav-item"> <!--adiciona um item a lista  -->
+              <a class="nav-link active" aria-current="page" href="#">Cardápio</a><!-- endereço para retornar a pg do cardapio -->
+            </li>
+            <li class="nav-item"> <!--adiciona um item a lista  -->
+              <a class="nav-link" href="#">Sobre</a> <!--endereço não estabelecido  -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <main>
+    <section class="my-3">
+
+      <!-- Grid -->
+      <div class="container">
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary rounded-circle"
+data-bs-toggle="modal" 
+data-bs-target="#exampleModal"> <!-- cria um botão (+) -->
+  +
+</button>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Adicionar Item</h5> <!-- titulo de nivel h5 -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+         <div class="modal-body">
+            <div class="mb-3">
+              <label for="NomeDoIten" class="form-label">Nome</label> <!-- cria um nome para descrever o que vai ser escrito no campo -->
+              <input type="text" class="form-control" id="nome" placeholder="" required="required"> <!--cria um campo para preencher  -->
+            </div>
+            <div class="mb-3">
+              <label for="DescriçãoDoIten" class="form-label">Descrição</label>
+              <input type="text" class="form-control" id="Descrição" placeholder="" required="required"> <!--cria um campo  -->
+            </div>
+            <div class="mb-3">
+              <label for="PreçoDoIten" class="form-label">Preço</label>
+              <input type="number" class="form-control" id="Preço" placeholder="" required="required"> <!-- cria um campo -->
+            </div>
+            <div class="mb-3">
+              <label for="EndereçoDaImagen" class="form-label">Endereço da imagem</label>
+              <input type="url" class="form-control" id="Endereço" placeholder="" required="required"> <!-- cria um campo -->
+            </div>
+        
+         </div>
+      <div class="modal-footer"> 
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button> <!-- cria um botão para fechar o modal -->
+        <button type="reset" class="btn btn-secondary">Limpar</button> <!--cria um botão para limpar os campos 'incompleto'  -->
+        <button type="submit" class="btn btn-primary">Cadastrar</button> <!-- cria um botão para salvar as informaçoes do campo -->
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- Linha -->
+        <div id="itens-cardapio" class="row">
+
+          <!-- Colunas-->
+
+          <!-- beforeend -->
+        </div>
+
+    </section>
+
+  </main>
+  <footer></footer>
+
+  <!-- link para Cardápio -->
+  <script src="./js/cardapio.js"></script>
+
+  <!-- link para Bootstrap - Js -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
